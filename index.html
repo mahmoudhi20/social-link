@@ -19,7 +19,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Using a more robust gradient for all devices */
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             background-attachment: fixed;
             padding: 20px;
@@ -28,7 +27,7 @@
 
         .profile-container {
             width: 100%;
-            max-width: 400px; /* Slightly tighter for a cleaner look */
+            max-width: 400px;
             background: var(--glass);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
@@ -83,39 +82,30 @@
             border-radius: 12px;
             font-weight: 500;
             transition: all 0.25s ease;
-            -webkit-tap-highlight-color: transparent; /* Removes blue flash on mobile tap */
+            -webkit-tap-highlight-color: transparent;
         }
 
-        /* Hover & Active states */
         .link-card:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
 
         .link-card:active {
-            transform: scale(0.98); /* Tactile feel on press */
+            transform: scale(0.98);
         }
 
         /* Platform specific hover colors */
         .whatsapp:hover { border-color: #25D366; color: #25D366; }
         .facebook:hover { border-color: #1877F2; color: #1877F2; }
         .instagram:hover { border-color: #E4405F; color: #E4405F; }
+        .tiktok:hover { border-color: #00f2ea; color: #ff0050; } /* TikTok Duo-tone vibe */
         .website:hover { border-color: #00d2ff; color: #00d2ff; }
         .phone:hover { border-color: #ff9f43; color: #ff9f43; }
 
-        /* Mobile Optimization for very small screens */
         @media (max-width: 360px) {
-            .profile-container {
-                padding: 30px 15px;
-            }
-            h1 {
-                font-size: 1.4rem;
-            }
-            .avatar {
-                width: 75px;
-                height: 75px;
-                font-size: 1.5rem;
-            }
+            .profile-container { padding: 30px 15px; }
+            h1 { font-size: 1.4rem; }
+            .avatar { width: 75px; height: 75px; font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -130,8 +120,10 @@
         <a href="https://wa.me/201032383037" class="link-card whatsapp">WhatsApp</a>
         <a href="https://www.facebook.com/share/18PcKJuY7K/" class="link-card facebook">Facebook</a>
         <a href="https://www.instagram.com/eng.ahmedabdelbast" class="link-card instagram">Instagram</a>
+        <a href="https://www.tiktok.com/@smartdesign22?_r=1&_t=ZS-94npvHbW9nL" class="link-card tiktok">TikTok</a>
         <a href="https://ahmed-abdelbast.my-style.in/?i=1" class="link-card website">Official Website</a>
-        <a href="tel:01024633084" class="link-card phone">Call Me</a>
+        <a href="tel:01024633084" class="link-card phone">Call Primary</a>
+        <a href="tel:01032383037" class="link-card phone">Call Secondary</a>
     </div>
 </div>
 
